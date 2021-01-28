@@ -16,9 +16,7 @@ int main(int argc, char* argv[])
     int sum = 0;
     if (rank == 0)
     {
-        for (int x = 1; x < 4; x++)
-        {
-
+       
             for (int i = 0; i < 4; i++)
             {
                 MPI_Send(&array[i], 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
@@ -30,7 +28,6 @@ int main(int argc, char* argv[])
             }
             cout << endl;
 
-        }
     }
     else {
         int curentValue = 0;
